@@ -1,0 +1,12 @@
+This file is part of the TASM to AT&T converter (TA2AS) package!
+----------------------------------------------------------------
+
+files.txt          this file
+readme.txt         information
+history.txt        history of TA2AS
+legal.txt          legal stuff READ IT!
+make.bat           little batch file to compile TA2AS
+main.c             source code - main module
+ta2as.c            source code - ta2as module
+ta2as.exe          compiled version of ta2as
+ta2as.h            source code - ta2as header file

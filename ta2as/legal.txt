@@ -1,0 +1,55 @@
+This file is part of the TASM to AT&T converter (TA2AS) package!
+----------------------------------------------------------------
+
+
+Legal Stuff
+===========
+
+The TASM to AT&T converter and information attached hereto, hereafter
+"TA2AS", is the property of Frank van Dijk. Read the terms and
+conditions of this agreement carefully before using the software. If you
+for any reason, whatsoever, cannot accept the conditions in this
+agreement, you are not permitted to use TA2AS.
+
+You may freely distribute and copy TA2AS and programs that are linked
+with it in a non-commercial environment provided that NO payment of any
+kind is charged for TA2AS or any combination of products or services
+including TA2AS without the authorization of the author Frank van Dijk
+and official written license and the distribution archive of TA2AS
+contains unmodified copies of the original files as produced by
+Frank van Dijk.
+
+Definition of "non-commercial distribution and use":
+
+þ Not using in a commercial environment, such as business, governmental
+  organization, association, school, foundation, or any other form of
+  juridical person, or any system where TA2AS is directly or
+  indirectly used to make profit.
+
+þ Copying the software on diskettes and/or on tape-storages and handling
+  it over from one person to another without any payment.
+
+þ Allowing the download of the software through a private Bulletin Board
+  System without additional charges.
+  (Pay Bulletin Board Systems may, however, charge their normal fee
+   provided that no additional charge for TA2AS is levied.)
+
+Commercial use, especially the industrial manufacturing on any data
+storage media and their distribution without the expressed permission
+of the producer, is strictly prohibited. No part of TA2AS (or programs
+linked with TA2AS) may be modified, altered, reverse engineered, sold, or
+distributed in any form whatsoever which would involve some sort of
+trade without prior written permission from Frank van Dijk.
+
+*** THIS INCLUDES THE DISTRIBUTION ON SHAREWARE AND OTHER        ***
+*** CD-ROMS, YOU MAY NOT UNDER ANY CIRCUMSTANCES DISTRIBUTE THIS ***
+*** PRODUCTION ON A CD-ROM WITHOUT A PRIOR WRITTEN PERMISSION!   ***
+
+This production is provided "as is", without warranty of any kind or
+fitness for a particular purpose, either expressed or implied, all of
+are hereby explicitly disclaimed. Frank van Dijk only guarantees that
+this production will occupy disk space.
+
+In no way Frank van Dijk or other members of SPiRiT, can be made
+liable for any damages that are caused by TA2AS. You are using
+TA2AS at your own risk!

@@ -1,0 +1,10 @@
+This file is part of the TASM to AT&T converter (TA2AS) package!
+----------------------------------------------------------------
+
+History
+=======
+
+Version 0.8
+-----------
+
+- First public release

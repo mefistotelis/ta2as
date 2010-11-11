@@ -1,0 +1,96 @@
+This file is part of the TASM to AT&T converter (TA2AS) package!
+----------------------------------------------------------------
+
+TA2AS v0.8  (Released 29 January 1996)
+======================================
+
+This is the first version of TASM to AT&T converter (TA2AS). Frank van Dijk,
+member of SPiRiT!, wrote this utility. It reads in a source file with TASM
+syntax and tries(first version remember? :)) to convert it to AT&T syntax.
+It hasn't been tested very well. So email all your bugreports to
+one of the SPiRiT emailaddresses (see below). Also for wanted features!
+But the sourcefile is included so why don't you try first :)
+
+This is one of the utilities we wrote, to make life easier when working
+with DJGPP! :)
+
+Other utilities are:
+- OBJ to COFF converter (O2C)
+- FSDB with screen/graphics save, timer/keyboard interruptsaving and program
+  reset!
+
+I had to make this package in a hurry, so errors are likely :(
+
+Greetings
+=========
+
+This time we only greet the groups/people we know :)
+
+The *BEST* radio station in Holland:
+- Radio 538
+
+All dutch groups that are DUTCH SCENE approved like:
+- Abstract Concepts
+- Acme
+- Logic Design
+- Nostalgia
+- Success
+
+See you all at X'96, SIH'96 or whatever DUTCH PARTY there will be in the
+future :)
+
+and not to forget :
+- Lizard King (thanks for the cool tunes)
+- Noice (lets go another time to Assembly ok?... partying on the ferry :))
+- RealTech (we were the first that got your demo at TP95... thanks)
+- Faker/S!P (with no doubt the *BEST* coder in the world)
+- Tran (for his PMode work)
+- Triton (I WANT 'Into the Shadows'!)
+- Mike Abrash (I WANT 'Quake'!)
+
+and
+- Students of HSE
+
+and the guys/women we forgot! (Notify us if we left you out!)
+
+Special SPiRiT Greetings go to:
+
+- Bloody        : Musixx
+- Cenotaph      : Coder
+- El Greco      : Coder
+- Frankied      : Coder (author of TA2AS)
+- Magic Boy     : Coder
+- Mr. Belvedere : BBS
+- Rico          : Coder
+- SynthFreak    : Musixx
+- The Counsellor: Coder/Grafixx
+- Tokyo Joe     : Coder
+- Trax          : Coder
+- Zest          : Musixx/Grafixx
+
+Contact information
+===================
+
+Here are several emailaddresses you can send email too in case of bug-reports,
+wanted features or just for a good talk:
+
+jan@stack.urc.tue.nl        Trax (also for a good talk about 3D and stuff)
+george@charm.il.ft.hse.nl   El Greco
+mb002@il.ft.hse.nl          Rico
+
+Most of the SPiRiT! members are studying Computer Science at the
+'Hogere School' in Eindhoven, The Netherlands. If you want us to work for
+you just email! We can make (3D) games and intros/presentations for your
+company! And you don't need a CD-ROM to put it on or a PENTIUM PRO to run
+it! We can make a presentation on a single 3,5" disk if you want!
+
+Top 3 most popular games played by the SPiRiT! members:
+- Screamer
+- War Craft II
+- Command & Conquer
+
+Waiting for:
+- Quake
+- Into the Shadows
+
+Signed all SPiRiT mebers

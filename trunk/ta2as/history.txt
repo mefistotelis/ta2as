@@ -8,8 +8,8 @@ Version 0.8.2
 -----------
 - Fixed addresses with DISP before "[" - now are parsed
   correctly
-- Made a lot of improvements, unifications and possible bugfixes
-  in code
+- Made a lot of improvements, unifications and possible
+  bugfixes in code
 - Added lots of comments to the source code
 - Data definitions with "=" are now properly converted
 
@@ -18,8 +18,8 @@ Version 0.8.1
 - Labels are no longer preceeded with "$"
 - Short jumps have now the "short" keyword removed
 - Fixed addresses with "()" - the brackets are skipped
-- Reformatted the hardly readable code, renamed variables into
-  more informative
+- Reformatted the hardly readable code, renamed variables
+  into more informative
 
 Version 0.8
 -----------

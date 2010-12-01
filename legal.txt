@@ -21,15 +21,15 @@ Frank van Dijk.
 
 Definition of "non-commercial distribution and use":
 
-þ Not using in a commercial environment, such as business, governmental
+* Not using in a commercial environment, such as business, governmental
   organization, association, school, foundation, or any other form of
   juridical person, or any system where TA2AS is directly or
   indirectly used to make profit.
 
-þ Copying the software on diskettes and/or on tape-storages and handling
+* Copying the software on diskettes and/or on tape-storages and handling
   it over from one person to another without any payment.
 
-þ Allowing the download of the software through a private Bulletin Board
+* Allowing the download of the software through a private Bulletin Board
   System without additional charges.
   (Pay Bulletin Board Systems may, however, charge their normal fee
    provided that no additional charge for TA2AS is levied.)

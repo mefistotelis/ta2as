@@ -1,9 +1,17 @@
-This file is part of the TASM to AT&T converter (TA2AS) package!
-----------------------------------------------------------------
+# Ta2As, Intel(TAsm) to AT&T(As) converter
 
+## Legal Stuff
 
-Legal Stuff
-===========
+This software is licensed for non-commercial use as explained in
+[[#Original-license]] chapter. However, all patches applied to the
+code after the release from the SPiRiT group (after v0.8.0) are
+double-licensed, and on user discretion can be used under original
+license or under [[#GPL-v3-or-later]] license.
+
+The double licensing applies only to the patches, not to the complete
+project.
+
+## Original license
 
 The TASM to AT&T converter and information attached hereto, hereafter
 "TA2AS", is the property of Frank van Dijk. Read the terms and
@@ -53,3 +61,18 @@ this production will occupy disk space.
 In no way Frank van Dijk or other members of SPiRiT, can be made
 liable for any damages that are caused by TA2AS. You are using
 TA2AS at your own risk!
+
+## GPL v3 or later
+
+This program is free software: you can redistribute it and/or modify it
+under the terms of the GNU General Public License as published by the
+Free Software Foundation, either version 3 of the License, or (at your
+option) any later version.
+
+This program is distributed in the hope that it will be useful, but
+WITHOUT ANY WARRANTY; without even the implied warranty of
+MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU
+General Public License for more details.
+
+For a full copy of the GNU General Public License, see
+<http://www.gnu.org/licenses/>.

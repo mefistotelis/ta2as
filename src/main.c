@@ -1,74 +1,85 @@
-/* TA2AS INTEL(TASM) TO AT&T(AS) CONVERTER, MAIN MODULE
-   COPYRIGHT 1994 FRANK VAN DIJK, LAST UPDATE M6-21-94	11:03
-*/
-
+/*  Ta2As, Intel(TAsm) to AT&T(As) converter.
+ */
+/** @file main.c
+ *     Main module for the Ta2As converter executable.
+ * @par Purpose:
+ *     Allows to compile the converter into command line tool.
+ * @author   Frank Van Dijk
+ * @author   Tomasz Lis
+ * @date     22 Jul 1994 - 30 Oct 2010
+ * @par  Copying and copyrights:
+ *     This program is copyrighted (c) 1994 Frank Van Dijk.
+ *     You may freely redistribute it in a non-commercial
+ *     environment, provided that NO payment is charged.
+ *     See legal.txt for complete text of the license.
+ */
 #include <stdio.h>
 #include <string.h>
 #include "ta2as.h"
 
-int main(int narg,char** argv)
+struct CmdOptions {
+	char *in_fname;
+	char *out_fname;
+	int cc_embeded;
+};
+
+int getCommandOptions(struct CmdOptions *opt, int argc, char *argv[])
 {
-/* Dit is een testmain*/
-FILE *in,*uit;
-int hoeveel,teller;
-cbuf b0,b1,b2,b3;
-oprd ops[32];
-for(teller=0;teller<32;ops[teller++].flags=0);
-if (narg!=3)
-	{
-	puts("Ta2As 0.8 - Copyright 1994 FRANK VAN DIJK\n\r"
-	     "Converts Tasm intel assembler to AT&T syntax (GNU As)\n\r"
-	     "Usage: Ta2As inputfile outputfile\n\n\r");
-	return 1;
+	if (argc != 3) {
+	    puts("Converts Tasm intel assembler to AT&T syntax (GNU As)\n\r"
+	         "Usage: Ta2As <inputfile> <outputfile>\n\n\r");
+	    return 1;
+    }
+	opt->in_fname = argv[1];
+	opt->out_fname = argv[2];
+	opt->cc_embeded = 0;
+	return 0;
+}
+
+int main(int argc, char *argv[])
+{
+	static struct CmdOptions opt;
+	FILE *in,*out;
+	int line_len;
+	static ChBuf line_buf;
+    static AsmLine ln;
+    static AsmCodeProps props;
+    puts("Ta2As "PROG_VERSION" - (c) 1994 Frank Van Dijk, 2010 Tomasz Lis\n\r");
+	// Analyze command line parameters
+	if (getCommandOptions(&opt, argc, argv) != 0)
+		return 1;
+    // Open files
+	in = fopen(opt.in_fname,"r");
+	if (!in) {
+	    puts("Couldn't open input file\n\r");
+		return 1;
 	}
-if(!(in=fopen(argv[1],"r"))) return 1;
-if(!(uit=fopen(argv[2],"w"))) return 1;
-while(fgets(b0,255,in))
-	{
-	int sizesuf=0;
-	*b1=*b2=*b3=0;
-	hoeveel=strlen(b0);
-	if(hoeveel) b0[hoeveel-1]=0;
-	ChopEm(b0,b1,b2,b3,ops,&hoeveel);
-	ModLine(b1,b2,b3,ops,&hoeveel);
-	if(*b1||*b2)
-		{
-		fputs(b1,uit);
-		fputc('\t',uit);
-		sizesuf=0;
-		for(teller=0;teller<hoeveel;teller++)
-			{
-			Operand2Operand(&ops[teller]);
-			sizesuf|=ops[teller].flags;
-			ops[teller].flags=0;
-			}
-		if((!strcmp(b2,"out")||!strcmp(b2,"in"))&&sizesuf!=2)
-			sizesuf&=~2;
-		if (sizesuf&1) strcat(b2,"b");
-		if (sizesuf&2) strcat(b2,"w");
-		if (sizesuf&4) strcat(b2,"l");
-		fputs(b2,uit);
-		fputc('\t',uit);
-		if(strcmp(b2,".byte")&&strcmp(b2,".short")&&strcmp(b2,".int")&&strcmp(b1,".equ"))
-			for(teller=hoeveel-1;teller>=0;)
-				{
-				fputs(ops[teller--].op,uit);
-				if (teller>=0) fputc(',',uit);
-				}
-		else	for(teller=0;teller<hoeveel;)
-				{
-				if(*ops[teller].op=='$')
-					memmove(ops[teller].op,ops[teller].op+1,strlen(ops[teller].op));
-				fputs(ops[teller++].op,uit);
-				if(teller<hoeveel) fputc(',',uit);
-				}
-		if(*b3) fputc('\t',uit);
-		}
-	if(*b3)
-	  fputs(b3,uit);
-	fputs("\n",uit);
+	out = fopen(opt.out_fname,"w");
+	if (!out) {
+		fclose(in);
+	    puts("Couldn't open output file\n\r");
+		return 1;
 	}
-fclose(in);
-fclose(uit);
-return 0;
+    memset(&props,0,sizeof(AsmCodeProps));
+	memset(line_buf,0,LINE_MAX_LENGTH+1);
+	// Sweep through assembly lines and convert
+	while (fgets(line_buf, LINE_MAX_LENGTH, in))
+	{
+	    // Initialize variables
+	    memset(&ln,0,sizeof(AsmLine));
+	    line_len = strlen(line_buf);
+	    // Get rid of the EOL character
+	    if (line_len > 0)
+	    	line_buf[line_len-1] = '\0';
+	    chopIntelAssemblyLine(line_buf, &ln);
+	    changeAssemblyLineToAtnt(&ln, &props);
+	    linkAtntAssemblyLine(&ln,line_buf);
+	    if (opt.cc_embeded)
+	        makeAssemblyLineCCEmbeded(line_buf);
+        fputs(line_buf,out);
+	    fputs("\n",out);
+    }
+	fclose(in);
+	fclose(out);
+	return 0;
 }

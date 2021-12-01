@@ -3,10 +3,10 @@
 ## Legal Stuff
 
 This software is licensed for non-commercial use as explained in
-[[#Original-license]] chapter. However, all patches applied to the
+[Original license](#Original-license) chapter. However, all patches applied to the
 code after the release from the SPiRiT group (after v0.8.0) are
 double-licensed, and on user discretion can be used under original
-license or under [[#GPL-v3-or-later]] license.
+license or under [GPL v3 or later](#GPL-v3-or-later) license.
 
 The double licensing applies only to the patches, not to the complete
 project.
@@ -49,9 +49,9 @@ linked with TA2AS) may be modified, altered, reverse engineered, sold, or
 distributed in any form whatsoever which would involve some sort of
 trade without prior written permission from Frank van Dijk.
 
-*** THIS INCLUDES THE DISTRIBUTION ON SHAREWARE AND OTHER        ***
-*** CD-ROMS, YOU MAY NOT UNDER ANY CIRCUMSTANCES DISTRIBUTE THIS ***
-*** PRODUCTION ON A CD-ROM WITHOUT A PRIOR WRITTEN PERMISSION!   ***
+*** THIS INCLUDES THE DISTRIBUTION ON SHAREWARE AND OTHER        ***  
+*** CD-ROMS, YOU MAY NOT UNDER ANY CIRCUMSTANCES DISTRIBUTE THIS ***  
+*** PRODUCTION ON A CD-ROM WITHOUT A PRIOR WRITTEN PERMISSION!   ***  
 
 This production is provided "as is", without warranty of any kind or
 fitness for a particular purpose, either expressed or implied, all of
